@@ -1,1 +1,0 @@
-jQuery(document).ready(function(){jQuery("#mega-blog-ui-tabs").tabs()});
