@@ -60,15 +60,15 @@ function cw_post_type_Countries() {
 	}
     add_action('init', 'cw_post_type_Countries');
     //remove permaLinks after register custom post type to avoid 404 error.
- function pluginprefix_install(){
+ function pluginprefix1_install(){
     wp_custom_post_Type();
     flush_rewrite_rules();
  }
  register_activation_hook( __FILE__,'cw_post_type_Countries()');
 //in deactive remove custome post type . and database tables
-function pluginpefix_decativation(){
+function pluginpefix1_decativation(){
     unregister_post_type('cities');
     flush_rewrite_rules();
 }
-register_deactivation_hook(__FILE__, 'pluginpefix_decativation');
+register_deactivation_hook(__FILE__, 'pluginpefix1_decativation');
 	/*Custom Post type end*/
